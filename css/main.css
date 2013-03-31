@@ -1,0 +1,110 @@
+.content {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 110%;
+}
+.about {
+    text-align: justify;
+}
+.tile {
+ width: 232px;
+ height: 104px;
+ padding: 5px;
+ color: #FFF;
+ font-family: sans-serif;
+ font-size: 12px;
+ border-width: 3px;
+ border-style: solid;
+ cursor: default;
+ position: relative;
+ border-color: white;
+  -webkit-transition: 0.1s all;
+ -moz-transition: 0.1s all;
+ -ms-transition: 0.1s all;
+ transition: 0.1s all;
+
+}
+
+.content h1, .content h2, .content h3 {
+    color: #C70036;
+}
+.tile-small {
+    width: 104px;
+    height: 104px;
+}
+
+div.tile:hover {
+	-webkit-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	-moz-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	-ms-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	border-width: 3px;
+	border-style:solid;
+}
+
+.tile h1 {
+    font-size: 24px;
+    margin-top: -5px;
+    color: white;
+}
+.grml {
+    background-color: #FFDA62;
+    border-color: #FFDA62;
+    color: #000000;
+}
+.grml h1 {
+    color: navy;
+}
+
+.tile .footer {
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+
+}
+
+a {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+.debian {
+    border-color: #fff0f0;
+    color: #222;
+    background-color: #fff0f0;
+}
+.debian h1 {
+    color: #222;
+}
+.devradio {
+    background-color: #151e4d;
+    border-color: #151e4d;
+
+}
+
+.devradio h1 {
+color: #fc0;
+}
+
+.salt {
+    background-color: #5ca3d4;
+    border-color: #5ca3d4;
+}
+
+.ccc-ulm {
+    background-color: #FF7F50;
+    border-color: #FF7F50;
+}
+
+.blueprint {
+    background-color: #072F74;
+    border-color: #072F74;
+}
+
+.penta-android {
+    background-color: #A4CA39;
+    border-color: #A4CA39;
+    padding-right: 12px;
+}
