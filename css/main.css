@@ -1,29 +1,23 @@
-.content {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 110%;
-}
 .about {
     text-align: justify;
 }
-.tile {
- width: 232px;
- height: 104px;
- padding: 5px;
- color: #FFF;
- font-family: sans-serif;
- font-size: 12px;
- border-width: 3px;
- border-style: solid;
- cursor: default;
- position: relative;
- border-color: white;
-  -webkit-transition: 0.1s all;
- -moz-transition: 0.1s all;
- -ms-transition: 0.1s all;
- transition: 0.1s all;
 
+.tile {
+    width: 232px;
+    height: 104px;
+    padding: 5px;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 12px;
+    border-width: 3px;
+    border-style: solid;
+    cursor: default;
+    position: relative;
+    border-color: white;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -ms-transition: 0.1s all;
+    transition: 0.1s all;
 }
 
 .content h1, .content h2, .content h3 {
@@ -35,12 +29,12 @@
 }
 
 div.tile:hover {
-	-webkit-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
-	-moz-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
-	-ms-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
-	transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
-	border-width: 3px;
-	border-style:solid;
+    -webkit-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    -moz-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    -ms-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    border-width: 3px;
+    border-style:solid;
 }
 
 .tile h1 {
@@ -48,11 +42,13 @@ div.tile:hover {
     margin-top: -5px;
     color: white;
 }
+
 .grml {
     background-color: #FFDA62;
     border-color: #FFDA62;
     color: #000000;
 }
+
 .grml h1 {
     color: navy;
 }
@@ -61,31 +57,33 @@ div.tile:hover {
     position: absolute;
     bottom: -10px;
     right: 5px;
-
 }
 
 a {
     color: black;
 }
+
 a:visited {
     color: black;
 }
+
 .debian {
     border-color: #fff0f0;
     color: #222;
     background-color: #fff0f0;
 }
+
 .debian h1 {
     color: #222;
 }
+
 .devradio {
     background-color: #151e4d;
     border-color: #151e4d;
-
 }
 
 .devradio h1 {
-color: #fc0;
+    color: #fc0;
 }
 
 .salt {
@@ -107,4 +105,60 @@ color: #fc0;
     background-color: #A4CA39;
     border-color: #A4CA39;
     padding-right: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .content {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 110%;
+    }
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    td {
+
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+
+    td {
+        float: left;
+    }
+
+    .tile {
+        width: 104px;
+        height: 104px;
+    }
+    .tile.penta-android h1 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .penta-android {
+        padding-right: 5px;
+    }
+
+    .tile p:nth-of-type(1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.2em;
+        max-height: 4.8em;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .content {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 110%;
+        min-width: 750px;
+    }
 }
