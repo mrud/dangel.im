@@ -43,7 +43,7 @@ div.tile:hover {
     color: white;
 }
 
-.grml {
+.grml, .grml a {
     background-color: #FFDA62;
     border-color: #FFDA62;
     color: #000000;
@@ -67,44 +67,55 @@ a:visited {
     color: black;
 }
 
-.debian {
+.debian, .debian a {
     border-color: #fff0f0;
     color: #222;
     background-color: #fff0f0;
 }
 
+.tile a {
+    text-decoration: none;
+}
 .debian h1 {
     color: #222;
 }
 
-.devradio {
+.devradio, .devradio a, .devradio:visited {
     background-color: #151e4d;
     border-color: #151e4d;
+    color: white;
 }
 
 .devradio h1 {
     color: #fc0;
 }
 
-.salt {
+.salt, .salt a, .salt a:visited {
     background-color: #5ca3d4;
     border-color: #5ca3d4;
+    color: white;
 }
 
-.ccc-ulm {
+.ccc-ulm, .ccc-ulm a, .ccc-ulm a:visited {
     background-color: #FF7F50;
     border-color: #FF7F50;
+    color: white;
 }
 
-.blueprint {
+.blueprint, .blueprint a, .blueprint a:visited {
     background-color: #072F74;
     border-color: #072F74;
+    color: white;
 }
 
 .penta-android {
     background-color: #A4CA39;
     border-color: #A4CA39;
     padding-right: 12px;
+}
+
+.penta-android a, .penta-android a:visited {
+    color: white;
 }
 
 @media screen and (max-width: 1024px) {
