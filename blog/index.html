@@ -1,0 +1,30 @@
+---
+layout: index
+title: Blog
+---
+
+{% for post in paginator.posts %}
+
+   <!-- here add you post markup -->
+   <span class="date">{{ post.date | date: "%d %B %Y" }}</span>
+   <a href="{{site.baseurl}}/{{ post.url }}" class="post-url"><h1 class="post-url">{{ post.title }}</h1></a>
+  <div class="blog-content">
+    {{ post.content }}
+  </div>
+{% endfor %}
+
+<div id="post-pagination" class="pagination">
+
+  {% if paginator.previous_page %}
+  <p class="previous">
+    {% if paginator.previous_page == 1 %} <a href="{{site.baseurl}}/"> {% else %} <a href="{{site.baseurl}}/page{{paginator.previous_page}}"> {% endif %} « Previous Entries</a>
+  </p>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <p class="next">
+    <a href="{{site.baseurl}}/page{{paginator.next_page}}">Next Entries »</a>
+  </p>
+  {% endif %}
+</div>
+<div class="clear"></div>

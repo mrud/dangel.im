@@ -1,0 +1,13 @@
+future:      true
+lsi:         true
+pygments:    true
+markdown:    maruku
+permalink:   date
+destination: _site/blog
+
+
+name: Ulrichs blog
+description: Everything and nothing
+url: http://dangel.im/blog/
+paginate: 2
+baseurl: /blog
