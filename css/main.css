@@ -2,6 +2,45 @@
     text-align: justify;
 }
 
+.header {
+    height: 100px;
+}
+.header h1 {
+    float: left;
+}
+.header ul {
+    list-style:none;
+
+    text-align:center;
+    float: right;
+}
+
+.header li {
+    display:inline;
+}
+.header li a {
+    display:inline-block;
+    padding:10px;
+    color: #C70036;
+}
+
+.clear {
+    clear: both;
+}
+
+.next {
+    float: right;
+    font-size: 90%;
+}
+.previous {
+    float: left;
+    font-size: 90%;
+}
+.pagination a:visited, .pagination a {
+    color: #C70036;
+    font-weight: bold;
+}
+
 .tile {
     width: 232px;
     height: 104px;
@@ -20,8 +59,26 @@
     transition: 0.1s all;
 }
 
-.content h1, .content h2, .content h3 {
+.page h1, .page h2, .page h3 {
     color: #C70036;
+}
+
+.blog h1, .blog h2, .blog h3 {
+    color: black;
+    font-size: 100%;
+}
+
+
+.blog .post-url {
+    color: #C70036;
+    text-decoration: none;
+}
+
+.blog .date {
+    font-size: 90%;
+    color: grey;
+    font-weight: bold;
+
 }
 .tile-small {
     width: 104px;
@@ -120,7 +177,7 @@ a:visited {
 
 @media screen and (max-width: 1024px) {
 
-    .content {
+    .page {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -165,7 +222,7 @@ a:visited {
 }
 
 @media screen and (min-width: 1024px) {
-    .content {
+    .page {
         width: 40%;
         margin-left: auto;
         margin-right: auto;
