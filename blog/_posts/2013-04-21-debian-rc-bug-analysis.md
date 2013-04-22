@@ -11,14 +11,18 @@ Michael Stapelberg recently posted a
 about looking into the number of Debian Developers actively working on RC
 bugs for the upcoming wheezy release.
 
-In this blog post I analyze the data shared by Michael and provide the R
-commands used to generate the data. Instead of using R you can use any
-other statistical environment such as numpy (have a look at ipython
-notebook + numpy).
+In this blog post I analyze the data shared by Michael and provide the `R`
+commands used to generate the plots & findings. If you are interested into
+looking into the data yourself, but don't like `R`, I suggest using ipython
+notebook + numpy instead.
 
-In order to work with the data we have to read the provided csv file. To
-get an initial understanding of the distribution of the data we can create
-a box plot to show the range of contributions:
+## Analysis
+
+After parsing the data file we typically want to get an understanding of the
+data, by using `summary(bugs)` we get the `minimum(1)`, `median(5)`,
+`mean(15.4)`, `max(716)` and quantiles of the data. This shows that the
+number of messages is wide-spread and a few people contribute a lot. To
+visualize the dispersion of the data we can create a box plot showing  the range of messages:
 
 ![boxplot](/blog/assets/img/debian-boxplot.png)
 
@@ -31,25 +35,26 @@ number of developers.
 
 ## Top 10 contributors
 
-As there is a broad range of contribution we should name the DDs who
-contributed the most. Here is the TOP 10 of DDs:
-
-1. Lucas Nussbaum - 716 messages
-2. Gregor Herrmann & Jakub Wilk - 270 messages
-3. Andreas Beckmann - 225 messages
-4. Julien Cristau - 205 messages
-5. Cyril Brulebois - 169 messages
-6. Moritz Muehlenhoff - 162 messages
-7. Michael Biebl - 159 messages
-8. Salvatore Bonaccorso - 158 messages
-9. Christoph Egger - 142 messages
-
+The TOP 10 contributors, according to the dataset, are:
+<ol>
+<li>Lucas Nussbaum - 716 messages</li>
+<li>Gregor Herrmann - 270 messages</li>
+<li value="2" style='list-style-type: none'>Jakub Wilk - 270 messages</li>
+<li value="4">Andreas Beckmann - 225 messages</li>
+<li>Julien Cristau - 205 messages </li>
+<li>Cyril Brulebois - 169 messages </li>
+<li>Moritz Muehlenhoff - 162 messages</li>
+<li>Michael Biebl - 159 messages</li>
+<li>Salvatore Bonaccorso - 158 messages</li>
+<li>Christoph Egger - 142 messages</li>
+</ol>
 
 ## r commands
 
 These are the commands used to generate the plots and information in this plot:
 {% highlight r %}
 bugs <- read.csv("by-msg.csv")
+summary(bugs)
 boxplot(bugs$rcbugmsg, log='y', range=0, ylab="# bugs")
 quantile(bugs$rcbugmsg)
 0%  25%  50%  75% 100%
