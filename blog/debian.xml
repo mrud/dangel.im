@@ -6,7 +6,7 @@ layout: none
     <channel>
         <title>{{ site.name }} - Debian</title>
         <description>Posts tagged with 'debian'</description>
-        <link>{{ site.url }}/</link>
+        <link>{{ site.url }}/blog/</link>
         <atom:link href="{{ site.url }}{{ page.url }}" rel="self" type="application/rss+xml" />
         {% for post in site.categories.debian limit:10 %}
             <item>
@@ -14,8 +14,8 @@ layout: none
                 <description>{{ post.content | xml_escape }}</description>
                 <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
                 <link>{{ site.url }}{{ post.url }}</link>
-                {% if post.prefix %}
-                <guid isPermaLink="true">{{ site.url }}{{post.prefix}}{{ post.url }}</guid>
+                {% if post.fixedlink: %}
+                <guid isPermaLink="true">{{ site.url }}{{ post.fixedlink }}</guid>
                 {% else %}
                 <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
                 {% endif %}

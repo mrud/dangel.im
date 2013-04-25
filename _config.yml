@@ -3,11 +3,14 @@ lsi:         true
 pygments:    true
 markdown:    maruku
 permalink:   date
-destination: _site/blog
+destination: _site/
+plugins:     _plugins
+
 
 
 name: Ulrichs blog
 description: Everything and nothing
-url: http://dangel.im/blog
+url: http://dangel.im
 paginate: 2
-baseurl: /blog
+baseurl: /
+permalink: /blog/:categories/:year/:month/:day/:title.html

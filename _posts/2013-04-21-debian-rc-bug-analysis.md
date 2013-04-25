@@ -3,6 +3,7 @@ title: Analyzing rc bug messages
 categories: [debian]
 layout: default
 prefix: /
+fixedlink: /blog//debian/2013/04/21/debian-rc-bug-analysis.html
 ---
 
 
