@@ -7,7 +7,7 @@ title: Blog
 
    <!-- here add you post markup -->
    <span class="date">{{ post.date | date: "%d %B %Y" }}</span>
-   <a href="{{site.baseurl}}/{{ post.url }}" class="post-url"><h1 class="post-url">{{ post.title }}</h1></a>
+   <a href="{{site.baseurl}}{{ post.url }}" class="post-url"><h1 class="post-url">{{ post.title }}</h1></a>
   <div class="blog-content">
     {{ post.content }}
   </div>

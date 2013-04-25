@@ -8,6 +8,6 @@ destination: _site/blog
 
 name: Ulrichs blog
 description: Everything and nothing
-url: http://dangel.im/blog/
+url: http://dangel.im/blog
 paginate: 2
 baseurl: /blog

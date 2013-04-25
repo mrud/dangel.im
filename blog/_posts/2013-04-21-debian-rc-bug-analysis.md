@@ -2,7 +2,7 @@
 title: Analyzing rc bug messages
 categories: [debian]
 layout: default
-
+prefix: /
 ---
 
 
