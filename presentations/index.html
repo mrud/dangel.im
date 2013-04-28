@@ -9,9 +9,16 @@ This is an exempt of presentations given at different venues. If you want to see
 {% for post in site.categories.presentations %}
 
    <!-- here add you post markup -->
-   <span class="date">» {{ post.date | date: "%d %b %Y" }}</span> <a href="{{ post.pdf }}">{{ post.title }}</a>
+   <span class="date">» {{ post.date | date: "%d %b %Y" }}</span> 
+   {% if post.pdf: %}<a href="{{ post.pdf }}">{% elsif post.link: %}<a href="{{ post.link }}">{% endif %}{{ post.title }}</a>
+   {% if post.person: %}
+   <span class="presentation person"> with {{ post.person }}</span>
+   {% endif %}
+   {% if post.language: %}
+   <span class="presentation lang"> in {{ post.language }}</span>
+   {% endif %}
    {% if post.venue: %}
-   <span class="venue">({{ post.venue }})</span>
+   <span class="presentatio venue"> ({{ post.venue }})</span>
    {% endif %}
    <br />
 {% endfor %}
