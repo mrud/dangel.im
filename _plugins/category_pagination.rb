@@ -97,6 +97,7 @@ module Jekyll
       else
         all_posts = site.site_payload['site']['posts']
       end
+      all_posts = all_posts.select { |x|  ! x.categories.include? "presentations"}
 
       pages = Pager.calculate_pages(all_posts, site.config['paginate'].to_i)
       (1..pages).each do |num_page|

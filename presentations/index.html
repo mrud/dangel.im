@@ -1,0 +1,22 @@
+---
+layout: presentations
+title: Presentations
+---
+
+<p>
+This is an exempt of presentations given at different venues. If you want to see a specific presentation included get in touch.
+</p>
+{% for post in site.categories.presentations %}
+
+   <!-- here add you post markup -->
+   <span class="date">» {{ post.date | date: "%d %b %Y" }}</span> <a href="{{ post.pdf }}">{{ post.title }}</a>
+   {% if post.venue: %}
+   <span class="venue">({{ post.venue }})</span>
+   {% endif %}
+   <br />
+{% endfor %}
+<hr />
+
+<p>
+For any question feel free to contact me anytime via email          <a href="mailto:ulrich@dangel.im">ulrich@dangel.im</a>, twitter: <a href="http://twitter.com/mr_ud">@mr_ud</a>, Jabber: <em>uli@jabber.spamt.net</em> or IRC.
+</p>

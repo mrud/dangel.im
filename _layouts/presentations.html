@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/pygments/default.css">
         <link rel="stylesheet" href="/css/main.css">
+        <link href="{{site.baseurl}}/feed.xml" rel="alternate" title="Posts" type="application/atom+xml">
+        <link href="{{site.baseurl}}/debian.xml" rel="alternate" title="Debian posts" type="application/atom+xml">
+        {{ extra_head }}
     </head>
 <body>
   <div class="page">
@@ -20,28 +23,15 @@
       <ul>
         <li><a href="/">about</a></li>
         <li><a href="/blog/">blog</a></li>
+        <li><a href="/presentations/">presentations</a></li>
       </ul>
-      <div class="clear" > </div>
     </div>
 
+    <div class="clear" > </div>
     <div class="content blog">
-      <span class="date">{{ page.date | date: "%d %B %Y" }}</span>
-      <a href="{{ page.url }}" class="post-url"><h1 class="post-url">{{ page.title }}</h1></a>
       {{ content }}
     </div>
-    <hr />
-    <div class="blog footer">
-    <h2>Recent Posts</h2>
-<ul>
-  {% for post in site.posts limit:3 do %}
-  {% unless post.categories contains 'presentations' %}
-  <li>
-    {{ post.date }} <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-  {% endunless %}
-  {% endfor %}
-</ul>
 
-</div>
+  </div>
 </body>
 </html>
