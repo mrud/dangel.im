@@ -174,6 +174,10 @@ a:visited {
 .penta-android a, .penta-android a:visited {
     color: white;
 }
+.vspace {
+    margin-top: 4em;
+
+}
 
 @media screen and (max-width: 1024px) {
 
